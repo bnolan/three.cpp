@@ -48,16 +48,16 @@ protected:
 
     Light::__clone( cloned, recursive );
 
-    auto light = static_cast<AreaLight&>( *cloned );
-    light.normal = normal;
-    light.right = right;
+    // auto light = static_cast<AreaLight&>( *cloned );
+    // light.normal = normal;
+    // light.right = right;
 
-    light.right = width;
-    light.right = height;
+    // light.right = width;
+    // light.right = height;
 
-    light.constantAttenuation = constantAttenuation;
-    light.linearAttenuation = linearAttenuation;
-    light.quadraticAttenuation = quadraticAttenuation;
+    // light.constantAttenuation = constantAttenuation;
+    // light.linearAttenuation = linearAttenuation;
+    // light.quadraticAttenuation = quadraticAttenuation;
 
   }
 

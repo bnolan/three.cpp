@@ -22,7 +22,7 @@
 #include <three/math/euler.h>
 #include <three/core/face.h>
 #include <three/core/face3.h>
-#include <three/core/face4.h>
+// #include <three/core/face4.h>
 #include <three/math/frustum.h>
 #include <three/math/line3.h>
 #include <three/math/math.h>
@@ -47,7 +47,7 @@
 #include <three/lights/spot_light.h>
 
 #include <three/loaders/loader.h>
-#include <three/loaders/json_loader.h>
+// #include <three/loaders/json_loader.h>
 
 #include <three/materials/material.h>
 #include <three/materials/line_basic_material.h>
@@ -66,7 +66,7 @@
 
 #include <three/renderers/renderer_parameters.h>
 #include <three/renderers/gl_renderer.h>
-#include <three/renderers/gl_shaders.h>
+// #include <three/renderers/gl_shaders.h>
 
 #include <three/renderers/renderables/renderable_face.h>
 #include <three/renderers/renderables/renderable_line.h>

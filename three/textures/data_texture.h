@@ -15,8 +15,9 @@ public:
 
 	static Ptr create( std::vector<unsigned char> data, float width, float height, const TextureDesc& desc ) {
 
-		return make_shared<DataTexture>( data, width, height, desc );
+		// return make_shared<DataTexture>( data, width, height, desc );
 
+		return NULL;
 	};
 
 	Image image;

@@ -21,7 +21,7 @@ include_directories(${SDL2_INCLUDE_DIR})
 include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(${RAPID_JSON_INCLUDE_DIR})
 
-set(THREE_EXAMPLE_DEP_LIBS ${THREE_LIB} ${OPENGL_LIBRARIES} ${SDL2_LIBRARY} ${SDLMAIN_LIBRARY})
+set(THREE_EXAMPLE_DEP_LIBS ${THREE_LIB} ${OPENGL_LIBRARIES} ${SDL2_LIBRARY} ${SDLMAIN_LIBRARY} crypto ssl)
 
 ## TODO: Remove hard-wired data directory path
 set(THREE_RELEASE_BUILD FALSE CACHE BOOL

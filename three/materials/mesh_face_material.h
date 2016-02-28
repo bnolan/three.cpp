@@ -21,7 +21,7 @@ public:
     return three::make_shared<MeshFaceMaterial>( materials );
   }
 
-  virtual THREE::MaterialType type() const {
+  virtual THREE::MaterialType type() const override {
     return THREE::MeshFaceMaterial;
   }
 

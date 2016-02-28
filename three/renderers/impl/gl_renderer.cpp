@@ -5237,7 +5237,7 @@ void GLRenderer::setRenderTarget( const GLRenderTarget::Ptr& renderTarget ) {
 
         } else if ( renderTarget->depthBuffer && renderTarget->stencilBuffer ) {
 
-          _gl.FramebufferRenderbuffer( GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, renderTarget->__glRenderbuffer[0] );
+          _gl.FramebufferRenderbuffer( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, renderTarget->__glRenderbuffer[0] );
 
         }
 
