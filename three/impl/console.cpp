@@ -4,10 +4,15 @@
 #include <iostream>
 #include <sstream>
 
+#include <android/log.h>
+
 namespace three {
 namespace {
 
-void stdcout( const char* msg ) { std::cout << msg << std::endl; }
+void stdcout( const char* msg ) { 
+  std::cout << msg << std::endl; 
+  __android_log_print(ANDROID_LOG_INFO, "sdl", "%s\n", msg);
+}
 
 } // namespace
 

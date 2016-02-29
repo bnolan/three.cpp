@@ -283,6 +283,29 @@ function( image, depth ) {
 
 } // namespace detail
 
+Texture::Ptr ImageUtils::loadTextureFromMemory(unsigned char const *buffer, int length) {
+  typedef std::unique_ptr<unsigned char, std::function<void(unsigned char*)>> stbi_ptr;
+
+  int w, h, n;
+
+  stbi_ptr data(stbi_load_from_memory(buffer, length, &w, &h, &n, 0), [](unsigned char* data) {
+    if (data) {
+      stbi_image_free(data);
+    }
+  });
+
+  if (!data) {
+    console().error() << "three::ImageUtils::loadTextureFromMemory: Error loading texture";
+    return Texture::Ptr();
+  }
+
+  console().log() << "three::ImageUtils::loadTextureFromMemory width: " << w << " height: " << h << " n: " << n << "\n";
+
+  return Texture::create(
+    TextureDesc(Image(data.get(), w * h * n, w, h), n == 3 ? THREE::RGBFormat : THREE::RGBAFormat)
+  );
+}
+
 Texture::Ptr ImageUtils::loadTexture( const std::string& url ) {
   //,THREE::Mapping mapping /*= THREE::UVMapping*/ ) {
 

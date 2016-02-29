@@ -106,7 +106,7 @@ typedef void (APIENTRYP PFNGLDRAWBUFFERPROC) (GLenum mode);
 typedef void (APIENTRYP PFNGLCLEARPROC) (GLbitfield mask);
 typedef void (APIENTRYP PFNGLCLEARCOLORPROC) (GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 typedef void (APIENTRYP PFNGLCLEARSTENCILPROC) (GLint s);
-typedef void (APIENTRYP PFNGLCLEARDEPTHPROC) (GLdouble depth);
+typedef void (APIENTRYP PFNGLCLEARDEPTHPROC) (GLfloat depth);
 typedef void (APIENTRYP PFNGLSTENCILMASKPROC) (GLuint mask);
 typedef void (APIENTRYP PFNGLCOLORMASKPROC) (GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
 typedef void (APIENTRYP PFNGLDEPTHMASKPROC) (GLboolean flag);

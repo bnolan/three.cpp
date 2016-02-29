@@ -2,6 +2,7 @@
 #define THREE_COLOR_H
 
 #include <three/common.h>
+#include <string>
 
 namespace three {
 
@@ -37,12 +38,17 @@ public:
   Color ( float r, float g, float b )
   : r ( r ), g ( g ), b ( b ) { }
 
+  Color ( std::string style ) {
+    setStyle( style );
+  }
+
   float& operator[] (const int i) { return rgb[i]; }
   const float operator[] (const int i) const { return rgb[i]; }
 
   Color& set( unsigned hex );
   Color& setRGB ( float rIn, float gIn, float bIn );
   Color& setHSL ( float h, float s, float l );
+  Color& setStyle ( std::string style );
 
   Color& copy( const Color& color );
 

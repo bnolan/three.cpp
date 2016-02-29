@@ -2729,7 +2729,6 @@ void GLRenderer::render( Scene& scene, Camera& camera, const GLRenderTarget::Ptr
 
   if ( autoUpdateObjects ) initGLObjects( scene );
 
-
   // custom render plugins (pre pass)
 
   renderPlugins( renderPluginsPre, scene, camera );
@@ -4623,8 +4622,9 @@ Program::Ptr GLRenderer::buildProgram( const std::string& shaderID,
     std::stringstream ss;
 
 #if defined(THREE_GLES)
-    ss << "precision " << _precision << " float;" << std::endl;
-    ss << "precision " << _precision << " int;" << std::endl;
+    // ss << "precision " << _precision << " float;" << std::endl;
+    // ss << "precision " << _precision << " int;" << std::endl;
+
 #endif
 
     ss << customDefines;
@@ -4730,8 +4730,8 @@ Program::Ptr GLRenderer::buildProgram( const std::string& shaderID,
     std::stringstream ss;
 
 #if defined(THREE_GLES)
-    ss << "precision " << _precision << " float;" << std::endl;
-    ss << "precision " << _precision << " int;" << std::endl;
+    // ss << "precision " << _precision << " float;" << std::endl;
+    // ss << "precision " << _precision << " int;" << std::endl;
 #elif defined(__APPLE__)
     ss << "#version 120" << std::endl;
 #else

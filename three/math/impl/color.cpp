@@ -1,6 +1,6 @@
 #include <three/math/color.h>
-
 #include <three/math/math.h>
+#include <three/math/color-parser/csscolorparser.hpp>
 
 namespace three {
 
@@ -59,6 +59,14 @@ Color& Color::setHSL( float h, float s, float l ) {
   return *this;
 
 }
+
+Color& Color::setStyle( std::string style )
+{
+  const CSSColorParser::Color& c = CSSColorParser::parse(style);
+  setRGB(c.r / 255.0, c.g / 255.0, c.b / 255.0);
+}
+
+
 
 Color& Color::copy( const Color& color ) {
 

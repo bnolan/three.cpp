@@ -10,6 +10,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := THREE
 
+APP_ABI := armeabi-v7a
+
 define walk
   $(wildcard $(1)) $(foreach e, $(wildcard $(1)/*), $(call walk, $(e)))
 endef

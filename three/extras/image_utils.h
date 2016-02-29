@@ -10,6 +10,12 @@ namespace three {
 class THREE_DECL ImageUtils {
 public:
 
+  static Texture::Ptr loadTextureFromMemory(
+    unsigned char const *buffer, 
+    int length
+    //,THREE::Mapping mapping = THREE::UVMapping
+  );
+
   static Texture::Ptr loadTexture(
     const std::string& url
     //,THREE::Mapping mapping = THREE::UVMapping
